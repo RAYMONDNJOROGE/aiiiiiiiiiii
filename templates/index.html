@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gemini Q&A</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Ask a Question</h2>
+    <input id="question" type="text" placeholder="Type your question..." />
+    <button onclick="askModel()">Submit</button>
+    <h3>Response:</h3>
+    <div id="response">Awaiting input...</div>
+  </div>
+
+  <script>
+    async function askModel() {
+      const question = document.getElementById("question").value;
+      document.getElementById("response").textContent = "Thinking...";
+
+      const res = await fetch("/api/ask", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ prompt: question })
+      });
+
+      const data = await res.json();
+      document.getElementById("response").textContent = data.response || "No response received.";
+    }
+  </script>
+</body>
+</html>
