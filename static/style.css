@@ -1,18 +1,57 @@
-body {
-  font-family: Arial, sans-serif;
-  background: #f4f4f4;
-  padding: 40px;
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: rgb(0, 0, 0,0.3) url(/static/images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: darken;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+header{
+    color: #ff0000;
+    display: flex;
+    width: 100%;
+    padding-top: 5px;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 2rem;
+    height: 40px;
+    background-color: white;
+    background: transparent;
+    backdrop-filter: blur(40px);
+    box-shadow: 2px 2px 2px 2px rgb(71, 59, 59);
+    margin-bottom: 30px;
 }
 .container {
+  display: block;
+  text-align: center;
   max-width: 600px;
   margin: auto;
   background: #fff;
   border-radius: 8px;
   padding: 20px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  background-color: white;
+  background: transparent;
+  backdrop-filter: blur(40px);
+  box-shadow: 2px 2px 2px 2px rgb(71, 59, 59);
 }
-input[type="text"] {
-  width: 100%;
+#h21{
+  color: #ff0000;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+#h31{
+  color: #0000ff;
+  font-size: 1.5rem;
+}
+input {
+  width: 90%;
+  text-align: center;
   padding: 12px;
   font-size: 16px;
   margin-bottom: 10px;
@@ -27,11 +66,31 @@ button {
   border-radius: 4px;
   font-size: 16px;
   cursor: pointer;
+  margin-bottom: 20px;
+}
+button:active{
+  color: #000000;
 }
 #response {
-  margin-top: 15px;
+  margin-top: 5px;
   background: #f9f9f9;
   padding: 15px;
   border-radius: 4px;
   white-space: pre-wrap;
+}
+footer{
+  color: #ff0000;
+  position: absolute;
+   bottom: 0;
+  display: flex;
+  width: 100%;
+  padding-top: 5px;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-size: 1.5rem;
+  height: 30px;
+  background-color: white;
+  background: transparent;
+  backdrop-filter: blur(40px);
+  box-shadow: 2px 2px 2px 2px rgb(71, 59, 59);
 }
